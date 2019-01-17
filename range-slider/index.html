@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+    <link rel="stylesheet" href="styles/styles.css">
+  
+</head>
+<body>
+
+	<section class="roi-calculator">
+     
+        <p class="roi-calculator--description">How much can enterprise collaboration save your business? With ThingWorx Navigate, organizations can not only expect to see a spike in engineering productivity, but also productivity increases for downstream teams such as manufacturing, purchasing, marketing and the supply chain. Use this simple calculator to estimate your company's potential annual productivity savings.</p>
+
+        <section>
+
+            <form class="roi-calculator--form" action="" method="">
+            
+                <h2 class="roi-calculator--heading">Increased Engineering Productivity</h2>
+
+                <label class="roi-calculator--form__label">How many engineers and designers will use ThingWorx Navigate?</label>
+                <input class="roi-calculator--form__input" type="text" id="engineer-count" name="engineer-count" >
+
+                <label class="roi-calculator--form__label">What is the average annual fully loaded cost of an engineer/designer at your company?</label>
+                <input class="roi-calculator--form__input" type="text" id="engineer-annual-cost" name="engineer-annual-cost" >
+
+                <div class="range-slider js-range" data-range-id="engineers">
+                    <label class="roi-calculator--form__label">What increase in productivity would you estimate?</label>
+                    <input class="range-slider--slide js-range-slide" type="range" value="" min="" max="" step="1">
+                    <output class="range-slider--output js-range-output" for="rangeSlider">0</output>
+                </div>
+            
+                <h2 class="roi-calculator--heading">Increased Employee Productivity</h2>
+
+                <label class="roi-calculator--form__label">How many enmployees will use ThingWorx Navigate?</label>
+                <input class="roi-calculator--form__input" type="text" id="employee-count" name="employee-count" >
+
+                <label class="roi-calculator--form__label">What is the average annual fully loaded cost of an employee at your company?</label>
+                <input class="roi-calculator--form__input" type="text" id="employee-annual-cost" name="employee-annual-cost" >
+
+                <div class="range-slider js-range" data-range-id="employees">
+                    <label class="roi-calculator--form__label">What increase in productivity would you estimate?</label>
+                    <input class="range-slider--slide js-range-slide" type="range" value="" min="" max="" step="1">
+                    <output class="range-slider--output js-range-output" for="rangeSlider">0</output>
+                </div>
+
+                <div class="u-textalign-right u-margintop-xxl">
+                    <button class="roi-calculator--btn__submit" type="submit">Calculate Results</button>
+                </div>
+            </form>
+
+        </section>
+
+    </section>
+
+    <!-- JavaScript libraries -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <!-- Range Slider JS -->
+    <script src="js/slider-prototype.js"></script>
+    <!-- <script src="js/range-slider.js"></script> -->
+
+    <script type="text/javascript">
+
+        $('[data-range-id = engineers]').rangeslider( 
+            { 'max': 75 }, 
+            { 'tooltip-msg': 'The maximum anticipated productivity increase for engineering or design' } 
+        );
+
+        $('[data-range-id = employees]').rangeslider( 
+            { 'max': 30 },
+            { 'tooltip-msg': 'The typical increase in employee productivity' } 
+        );
+
+    </script>
+
+</body>
+</html>
